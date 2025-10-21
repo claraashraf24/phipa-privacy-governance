@@ -191,7 +191,8 @@ if logs:
         "action": "Action", "is_authorized": "Authorized"
     })
 
-    st.dataframe(display_df, width='stretch', height=360)
+    st.dataframe(display_df, use_container_width=True, height=360)
+
 
     csv = convert_df_to_csv(display_df)
     excel = convert_df_to_excel(display_df)

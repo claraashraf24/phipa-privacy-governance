@@ -1,5 +1,7 @@
 # main.py
 from fastapi import FastAPI
+from database import Base, engine
+import models
 from routers import (
     users,
     patients,
@@ -24,6 +26,10 @@ app = FastAPI(
         "email": "compliance@demohealth.ca",
     },
 )
+
+
+
+Base.metadata.create_all(bind=engine)
 
 # ----------------------------------------------------------
 #  ROOT ENDPOINT

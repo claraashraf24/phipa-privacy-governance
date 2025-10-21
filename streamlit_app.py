@@ -9,7 +9,7 @@ from io import BytesIO
 # -------------------------------------------------------------------
 # 🌐 API Configuration
 # -------------------------------------------------------------------
-API_BASE = os.getenv("API_BASE", "http://127.0.0.1:8000")
+API_BASE = os.getenv("API_BASE", "https://phipa-privacy-governance.onrender.com")
 
 st.set_page_config(
     page_title="PHIPA Compliance Dashboard",

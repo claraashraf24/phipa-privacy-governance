@@ -6,3 +6,10 @@ pandas==2.2.3
 SQLAlchemy==2.0.25
 xlsxwriter==3.2.0
 python-dotenv==1.0.1
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pandas
+matplotlib
+

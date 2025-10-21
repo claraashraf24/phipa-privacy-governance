@@ -217,7 +217,7 @@ if alerts:
         df_alerts[["created_at", "message", "resolved"]].rename(columns={
             "created_at": "Created At", "message": "Message", "resolved": "Resolved"
         }),
-        width='stretch', height=260
+        use_container_width=True, height=260
     )
     csv = convert_df_to_csv(df_alerts)
     st.download_button("⬇️ Download Alerts (CSV)", csv, "alerts.csv", "text/csv")
@@ -254,7 +254,7 @@ with st.expander("🧾 Consent Matrix (who can view/edit whom)"):
             "user_name": "User", "role": "Role", "patient_name": "Patient",
             "can_view": "Can View", "can_edit": "Can Edit"
         })
-        st.dataframe(df_cm, width='stretch', height=280)
+        st.dataframe(df_cm, use_container_width=True, height=280)
         csv = convert_df_to_csv(df_cm)
         st.download_button("⬇️ Download Consent Matrix (CSV)", csv, "consent_matrix.csv", "text/csv")
     else:
